@@ -4,7 +4,7 @@ public class SimilarDigit {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-System.out.println(similarDigit(12,56));
+System.out.println(similarDigit(12,562));
 		
 	}
 	

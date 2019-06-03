@@ -6,7 +6,7 @@ public class BalanceParanthesis {
 	
 	public static void main(String args[]){
 
-		int pos=checkParethesisBalance("{()}}");
+		int pos=checkParethesisBalance("{{()}}");
 		System.out.println("pos---------:hhh"+pos);
 	}
 	

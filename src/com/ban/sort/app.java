@@ -5,25 +5,30 @@ public class app {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int a[]={38,2,57,1,13,70};
-int b[]=selectionSort(a);
-int c[]=bubbleSort(a);
-int d[]=insertionSort(a);
+/*int b[]=selectionSort(a);
+int c[]=bubbleSort(a);*/
+		
+		int c[]=bubbleSort2(a);
+		for(int i=0;i<c.length;i++){
+		System.out.print(c[i]+ " ,.. ");
+	}
+//int d[]=insertionSort(a);
 int e[]={38,2,57,1,13,70};;
 MergeSort ms=new MergeSort();
 ms.sort(e);
-for(int i=0;i<b.length;i++){
+/*for(int i=0;i<b.length;i++){
 	System.out.print(b[i]+ " , ");
 }
 System.out.println( "**************************");
 
 for(int i=0;i<c.length;i++){
 	System.out.print(c[i]+ " , ");
-}
+}*/
 System.out.println( "**************************");
 
-for(int i=0;i<d.length;i++){
+/*for(int i=0;i<d.length;i++){
 	System.out.print(d[i]+ " , ");
-}
+}*/
 System.out.println( "************************** merge***************");
 
 for(int i=0;i<e.length;i++){
@@ -66,6 +71,23 @@ for(int i=0;i<e.length;i++){
 		}
 		return a;
 	}
+	
+	public static int[] bubbleSort2(int[]data){
+		int n=data.length;
+		int temp;
+		for(int step=0;step<n-1;step++)
+		    for(int i=0;i<n-step-1;i++)
+		    {
+		        if(data[i]>data[i+1])   /* To sort in descending order, change > to < in this line. */
+		        {
+		            temp=data[i];
+		            data[i]=data[i+1];
+		            data[i+1]=temp;
+		        }
+		    }
+		return data;
+	}
+
 	
 	public static int[] insertionSort(int[] a){
 		//int insertionPoint=0;
